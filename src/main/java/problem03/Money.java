@@ -5,7 +5,7 @@ public class Money {
 	//
 	// 클래스 구현을 완성 하십시오.
 	// 
-	// 객체비교를 통해 동일하게 나온다는ㄱ 뭔뜻이지
+	//
 	
 	private int amount;
 	
@@ -20,21 +20,27 @@ public class Money {
 		//Money = m;
 		//return Money(5);
 		//return Money(amount);
-		return this;
+		// 머니의 데이터타입이 변했는데 그걸 어떻게 반환하지?
+		// amount로 머니 데이터타입비교
+		Money m = new Money(amount);
+		return m;
 	}
 
 	public Money minus(Money money) {
 		this.amount = this.amount - money.amount;
-		return this;
+		Money m = new Money(amount);
+		return m;
 	}
 
 	public Money multiply(Money money) {
 		this.amount = this.amount * money.amount;
-		return this;
+		Money m = new Money(amount);
+		return m;
 	}
 
 	public Money devide(Money money) {
 		this.amount = this.amount/money.amount;
-		return this;
+		Money m = new Money(amount);
+		return m;
 	}
 }
